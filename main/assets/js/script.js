@@ -1,6 +1,6 @@
 (function(){
     // Functions
-    function buildQuiz(){
+    function bobBuildQuiz(){
       // variable to store the HTML output
       const output = [];
   
@@ -35,13 +35,13 @@
       );
   
       // finally combine our output list into one string of HTML and put it on the page
-      quizContainer.innerHTML = output.join('');
+      qqqContainer.innerHTML = output.join('');
     }
   
     function showResults(){
   
       // gather answer containers from our quiz
-      const answerContainers = quizContainer.querySelectorAll('.answers');
+      const answerContainers = qqqContainer.querySelectorAll('.answers');
   
       // keep track of user's answers
       let numCorrect = 0;
@@ -102,45 +102,45 @@
     }
   
     // Variables
-    const quizContainer = document.getElementById('quiz');
+    const qqqContainer = document.getElementById('quiz');
     const resultsContainer = document.getElementById('results');
     const submitButton = document.getElementById('submit');
     const myQuestions = [
       {
         question: "Who invented JavaScript?",
         answers: {
-          a: "Douglas Crockford",
-          b: "Sheryl Sandberg",
+          a: "Mark Twain",
+          b: "Joseph Stihl",
           c: "Brendan Eich"
         },
         correctAnswer: "c"
       },
       {
-        question: "Which one of these is a JavaScript package manager?",
+        question: "What is JavaScript best utilized for?",
         answers: {
-          a: "Node.js",
-          b: "TypeScript",
-          c: "npm"
+          a: "Making pages dynamic",
+          b: "Building forts",
+          c: "Creating paper airplanes"
         },
-        correctAnswer: "c"
+        correctAnswer: "a"
       },
       {
-        question: "Which tool can you use to ensure code quality?",
+        question: "Which tool does Javascript pair like 'lamb and tuna fish' with?",
         answers: {
           a: "Angular",
           b: "jQuery",
           c: "RequireJS",
           d: "ESLint"
         },
-        correctAnswer: "d"
+        correctAnswer: "b"
       }
     ];
   
     // Kick things off
-    buildQuiz();
+    bobBuildQuiz();
   
     // Pagination
-    const previousButton = document.getElementById("previous");
+    const previousButton = document.getElementById("prev");
     const nextButton = document.getElementById("next");
     const slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
