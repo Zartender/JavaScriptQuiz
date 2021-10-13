@@ -3,10 +3,12 @@
     // Functions
     function bobBuildQuiz() {
         // variable to store the HTML output
+        // bobBuildQuiz is a function and the () will contain the parameters or arguments.
         console.log(bobBuildQuiz);
         const output = [];
 
         // for each question...
+        // myQuestions is an object/variable, forEach is a method, and the parameters are as follows(.)
         myQuestions.forEach(
             
             (currentQuestion, questionNumber) => {
