@@ -1,2 +1,2 @@
 # JavaScriptQuiz
-Project Numero Uno
+Project Number One

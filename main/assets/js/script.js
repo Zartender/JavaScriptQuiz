@@ -1,25 +1,17 @@
 
-(function () {
-    // Functions
-    function bobBuildQuiz() {
-        // variable to store the HTML output
-        // bobBuildQuiz is a function and the () will contain the parameters or arguments.
-        console.log(bobBuildQuiz);
-        const output = [];
-
-        // for each question...
-        // myQuestions is an object/variable, forEach is a method, and the parameters are as follows(.)
+(() => {
+    
+    function CreateQuiz() {
+        var output = [];
         myQuestions.forEach(
-            
+
             (currentQuestion, questionNumber) => {
 
-                // variable to store the list of possible answers
-                const answers = [];
+                
+                var answers = [];
 
-                // and for each available answer...
                 for (letter in currentQuestion.answers) {
 
-                    // ...add an HTML radio button
                     answers.push(
                         `<label>
                 <input type="radio" name="question${questionNumber}" value="${letter}">
@@ -29,7 +21,7 @@
                     );
                 }
 
-                // add this question and its answers to the output
+            
                 output.push(
                     `<div class="slide">
               <div class="question"> ${currentQuestion.question} </div>
@@ -39,14 +31,14 @@
             }
         );
 
-        // finally combine our output list into one string of HTML and put it on the page
-        qqqContainer.innerHTML = output.join('');
+        
+        qContainer.innerHTML = output.join('');
     }
 
     function showResults() {
 
         // gather answer containers from our quiz
-        const answerContainers = qqqContainer.querySelectorAll('.answers');
+        const answerContainers = qContainer.querySelectorAll('.answers');
 
         // keep track of user's answers
         let numCorrect = 0;
@@ -67,6 +59,7 @@
                 // color the answers green
                 answerContainers[questionNumber].style.color = 'lightgreen';
             }
+
             // if answer is wrong or blank
             else {
                 // color the answers red
@@ -106,11 +99,11 @@
         showSlide(currentSlide - 1);
     }
 
-    // Variables
-    const qqqContainer = document.getElementById('quiz');
-    const resultsContainer = document.getElementById('results');
-    const submitButton = document.getElementById('submit');
-    const myQuestions = [
+    
+    var qContainer = document.getElementById('quiz');
+    var resultsContainer = document.getElementById('results');
+    var submitButton = document.getElementById('submit');
+    var myQuestions = [
         {
             question: "Who invented JavaScript?",
             answers: {
@@ -141,19 +134,19 @@
         }
     ];
 
-    // Kick things off
-    bobBuildQuiz();
+    
+    CreateQuiz();
 
-    // Pagination
-    const previousButton = document.getElementById("prev");
-    const nextButton = document.getElementById("next");
-    const slides = document.querySelectorAll(".slide");
+    
+    var previousButton = document.getElementById("prev");
+    var nextButton = document.getElementById("next");
+    var slides = document.querySelectorAll(".slide");
     let currentSlide = 0;
 
-    // Show the first slide
+    
     showSlide(currentSlide);
 
-    // Event listeners
+
     submitButton.addEventListener('click', showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
