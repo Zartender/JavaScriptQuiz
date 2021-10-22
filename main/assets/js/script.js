@@ -99,11 +99,24 @@
         showSlide(currentSlide - 1);
     }
 
+    function startQuiz() {
+        //Hide the start screen 
+        var divStartEL = document.getElementById("startScreen"); 
+        divStartEL.setAttribute("class", "hide");
+        //un-hide the question screen 
+
+        qContainer.removeAttribute('class');
+        nextButton.style.display = 'inline-block';
+
+    }
     
     var qContainer = document.getElementById('quiz');
     var resultsContainer = document.getElementById('results');
     var submitButton = document.getElementById('submit');
+    var startButton = document.getElementById('begin');
     var myQuestions = [
+        
+        
         {
             question: "Who invented JavaScript?",
             answers: {
@@ -145,9 +158,12 @@
 
     
     showSlide(currentSlide);
+    nextButton.style.display = 'none';
 
 
     submitButton.addEventListener('click', showResults);
     previousButton.addEventListener("click", showPreviousSlide);
     nextButton.addEventListener("click", showNextSlide);
+    startButton.addEventListener('click', startQuiz); 
 })();
+

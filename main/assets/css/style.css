@@ -50,7 +50,9 @@ button:hover{
 }
 
 
-
+.hide {
+  display: none;
+}
 
 
 .slide{
