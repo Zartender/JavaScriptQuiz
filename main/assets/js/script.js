@@ -2,8 +2,26 @@
 let timer = document.querySelector("p.timer");
 let questionRemaining = 0;
 let myQuestions = document.querySelector("#myQuestions");
-let timeFinished = document.querySelector("#timeFinished")
-let contender = document.querySelector("#contender")
+// objects related to time
+let timeFinished = document.querySelector("#timeFinished");
+let contender = document.querySelector("#contender");
+
+// start button to begin quiz
+const startButton = document.querySelector("#begin");
+
+const answerOne = document.querySelector("oneAnswer");
+const answerTwo = document.querySelector("twoAnswer");
+const answerThree = document.querySelector("#threeAnswer");
+
+function startQuiz() {
+    console.log("Begin Quiz");
+    
+}
+
+// on start
+startButton.addEventListener("click", startQuiz, setTime);
+
+
 // array of my questions, possible answers, and correct answer.
 const questionaires = [
     {
@@ -38,7 +56,7 @@ const questionaires = [
 ];
 
 // timer function trouble
-function timeAllowance() {
+function setTime() {
     let timeFrameInterval = setInterval (function() {
         remainingSeconds--;
         timer.textContent = `Timer:${remainingSeconds}`;
@@ -53,6 +71,15 @@ function timeAllowance() {
     }, 1000);
     
 }
+
+// // begin quiz
+// function startQuiz() {
+//     // set question
+//     console.log("begin");
+//     // begin clock
+// }
+
+
 
 
 
