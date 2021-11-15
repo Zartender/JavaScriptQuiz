@@ -2,6 +2,8 @@
 let timer = document.querySelector("p.timer");
 let questionRemaining = 0;
 let myQuestions = document.querySelector("#myQuestions");
+let timeFinished = document.querySelector("#timeFinished")
+let contender = document.querySelector("#contender")
 // array of my questions, possible answers, and correct answer.
 const questionaires = [
     {
@@ -35,6 +37,7 @@ const questionaires = [
 
 ];
 
+// timer function trouble
 function timeAllowance() {
     let timeFrameInterval = setInterval (function() {
         remainingSeconds--;
@@ -42,9 +45,12 @@ function timeAllowance() {
         if(remainingSeconds === 0 || questionRemaining === questionaires.length) {
             clearInterval(timeFrameInterval);
             myQuestions.display = "none";
+            timeFinished.display = "block";
+            contender.textContent = remainingSeconds;
             
+
         }
-    }
+    }, 1000);
     
 }
 
