@@ -7,14 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="stylesheet" href="./main/assets/css/reset.css">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
     <link rel="stylesheet" href="./main/assets/css/style.css">
-   
+
 
     <title>Best JavaScript Quiz</title>
 
 <body>
-<!-- header container -->
+    <!-- header container -->
     <header class="container-fluid mb-5">
         <!-- scores y time -->
         <div class="row">
@@ -25,20 +26,46 @@
             </div>
             <!-- clock/timer -->
             <div class="col-6">
-                <p class="d-flex justify-content-end timer"><Time:85s></Time:85s></p>
+                <p class="d-flex justify-content-end time">
+                    <Time:85s></Time:85s>
+                </p>
             </div>
         </div>
     </header>
-    
-        
+    <main>
+        <!-- contains div according to bootstrap standards-->
+        <div class="container">
+            <div class="horizontal">
+                <div class="col-4"></div>
+                <div class="col-8">
+                    <h2 id="questions">Enter Question Here</h2>
+                    <ul class="unordered-list">
+                        <li class="mb-4">
+                            <button id="oneAnswer" value="0" type="button" class="btn btn-success answerButton"></button>
+                        </li>
+                        <li class="mb-4">
+                            <button id="twoAnswer" value="1" type="button" class="btn btn-success answerButton"></button>
+                        </li>
+                        <li class="mb-4">
+                            <button id="threeAnswer" value="2" type="button" class="btn btn-success answerButton"></button>
+                        </li>
+                        <li class="mb-4">
+                            <button id="fourAnswer" value="3" type="button" class="btn btn-success answerButton"></button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <button id="prev">Previous Question</button>
+            <button id="next" class="hide">Next Question</button>
+            <button id="submit">Submit Quiz</button>
+            <div id="results"></div>
+    </main>
+
     </div>
-    
-    <button id="prev">Previous Question</button>
-    <button id="next" class="hide">Next Question</button>
-    <button id="submit">Submit Quiz</button>
-    <div id="results"></div>
+    <!-- js src(s) -->
+    <script src="./main/assets/js/script.js"></script>
 </body>
 
-<script src="./main/assets/js/script.js"></script>
 
 </html>

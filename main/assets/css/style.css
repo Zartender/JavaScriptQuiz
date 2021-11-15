@@ -1,4 +1,4 @@
-/* :root{ 
+:root{ 
     text-align: center;
 }
 
@@ -8,7 +8,8 @@ body{
     color: #333;
   font-weight: 300;
   text-align: center;
-  background-color: #f8f6f0;
+  background-color: #f8d97a;
+ 
 
 }
 h1{
@@ -37,7 +38,7 @@ h1{
 button{
   font-family: 'Work Sans', sans-serif;
 	font-size: 22px;
-	background-color: rgb(255, 120, 214);
+	background-color: rgb(236, 135, 40);
 	color: #fff;
 	border: 0px;
 	border-radius: 3px;
@@ -73,4 +74,4 @@ button:hover{
   height: 200px;
   margin-top: 40px;
 }
- */
+
