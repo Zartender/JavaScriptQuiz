@@ -1,38 +1,45 @@
 // queryselector inputs time into p with class timer
 
-let questionRemaining = 0;
-let myQuestions = document.querySelector("#myQuestions");
+// let questionRemaining = 0;
+// let myQuestions = document.querySelector("#myQuestions");
 // objects related to time
-let timeFinished = document.querySelector("#timeFinished");
-let contender = document.querySelector("#contender");
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
-var timerElement = document.querySelector("p.timer-count");
-;
+// let timeFinished = document.querySelector("#timeFinished");
+// let contender = document.querySelector("#contender");
+// var win = document.querySelector(".win");
+// var lose = document.querySelector(".lose");
 
+// start button
+var beginButton = document.querySelector(".begin-quiz");
+var multipleChoice = document.querySelector(".multi-choice");
 var chosenWord = "";
 var numBlanks = 0;
 var winCounter = 0;
 var loseCounter = 0;
 var isWin = false;
 var timer;
-var timerCount;
+var stopWatch;
+
+// win or lose 
+var win = document.querySelector(".win");
+var lose = document.querySelector(".lose");
 // start button to begin quiz
-const startButton = document.querySelector("#begin");
+
+var stopWatch = document.querySelector("stop-watch");
+
 
 const answerOne = document.querySelector("oneAnswer");
 const answerTwo = document.querySelector("twoAnswer");
 const answerThree = document.querySelector("#threeAnswer");
 
-function startQuiz() {
+function beginQuiz() {
     console.log("Begin Quiz");
-    timerCount = 45;
+    timerAllowance = 45;
     startTimer();
     
 }
 
 // on start
-startButton.addEventListener("click", startQuiz);
+beginButton.addEventListener("click", beginQuiz);
 
 
 // array of my questions, possible answers, and correct answer.
@@ -72,18 +79,18 @@ const questionaires = [
 function startTimer() {
     // Sets timer
     timer = setInterval(function() {
-      timerCount--;
-      timerElement.textContent = timerCount;
-      if (timerCount >= 0) {
+      timerAllowance--;
+      stopWatch.textContent = timerAllowance;
+      if (stopWatch >= 0) {
         // Tests if win condition is met
-        if (isWin && timerCount > 0) {
+        if (isWin && timerAllowance > 0) {
           // Clears interval and stops timer
           clearInterval(timer);
           winGame();
         }
       }
       // Tests if time has run out
-      if (timerCount === 0) {
+      if (stopWatch === 0) {
         // Clears interval
         clearInterval(timer);
         loseGame();
