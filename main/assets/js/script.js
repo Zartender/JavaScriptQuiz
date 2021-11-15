@@ -26,7 +26,7 @@ const answerThree = document.querySelector("#threeAnswer");
 
 function startQuiz() {
     console.log("Begin Quiz");
-    timerCount = 85;
+    timerCount = 45;
     startTimer();
     
 }
