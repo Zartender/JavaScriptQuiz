@@ -1,99 +1,86 @@
-// queryselector inputs time into p with class timer
+let score = [0, 0];
 
-// let questionRemaining = 0;
-// let myQuestions = document.querySelector("#myQuestions");
-// objects related to time
-// let timeFinished = document.querySelector("#timeFinished");
-// let contender = document.querySelector("#contender");
-// var win = document.querySelector(".win");
-// var lose = document.querySelector(".lose");
-
-// start button
-var beginButton = document.querySelector(".begin-quiz");
-var multipleChoice = document.querySelector(".multi-choice");
-var chosenWord = "";
-var numBlanks = 0;
-var winCounter = 0;
-var loseCounter = 0;
-var isWin = false;
-var timer;
-var stopWatch;
-
-// win or lose 
-var win = document.querySelector(".win");
-var lose = document.querySelector(".lose");
-// start button to begin quiz
-
-var stopWatch = document.querySelector("stop-watch");
-
-
-const answerOne = document.querySelector("oneAnswer");
-const answerTwo = document.querySelector("twoAnswer");
-const answerThree = document.querySelector("#threeAnswer");
-
-function beginQuiz() {
-    console.log("Begin Quiz");
-    timerAllowance = 45;
-    startTimer();
-    
+let Q1 = {
+  Q: "_____ require a comma after each new variable.",
+  As: ["Arrays", "Objects", "Strings", "Lines"],
+  Correct: 2,
 }
 
-// on start
-beginButton.addEventListener("click", beginQuiz);
+let Q2 = {
+  Q: "A common name for a javascript file is...",
+  As: ["style", "index", "README", "script"],
+  Correct: 4,
+}
 
+let Q3 = {
+  Q: "What does API stand far?",
+  As: ["Airwaves Perpetrator Imposition", "Alturistic Polygraph Induction", "Applitcation Programming Interface", "Antinodal Plyometric Interference"],
+  Correct: 3,
+}
 
-// array of my questions, possible answers, and correct answer.
-const questionaires = [
-    {
-                    question: "Who invented JavaScript?",
-                    answers: {
-                        a: "Mark Twain",
-                        b: "Joseph Stihl",
-                        c: "Brendan Eich"
-                    },
-                    correctAnswer: "c"
-                },
-                {
-                    question: "What is JavaScript best utilized for?",
-                    answers: {
-                        a: "Making pages dynamic",
-                        b: "Building forts",
-                        c: "Creating paper airplanes"
-                    },
-                    correctAnswer: "a"
-                },
-                {
-                    question: "Which tool does Javascript pair like 'lamb and tuna fish' with?",
-                    answers: {
-                        a: "Angular",
-                        b: "jQuery",
-                        c: "RequireJS",
-                        d: "ESLint"
-                    },
-                    correctAnswer: "b"
-                }
+let Q4 = {
+  Q: "What do you put before a comment in JavaScript?",
+  As: ["<!--", "##", "/*", "//"],
+  Correct: 4,
+}
 
-];
+let Q5 = {
+  Q: "Which logical operator compares value and type?",
+  As: ["=", "==", "===", "%"],
+  Correct: 3,
+}
 
-// timer function trouble
-function startTimer() {
-    // Sets timer
-    timer = setInterval(function() {
-      timerAllowance--;
-      stopWatch.textContent = timerAllowance;
-      if (stopWatch >= 0) {
-        // Tests if win condition is met
-        if (isWin && timerAllowance > 0) {
-          // Clears interval and stops timer
-          clearInterval(timer);
-          winGame();
-        }
-      }
-      // Tests if time has run out
-      if (stopWatch === 0) {
-        // Clears interval
-        clearInterval(timer);
-        loseGame();
-      }
-    }, 1000);
+let Q6 = {
+  Q: "Which logical operator means 'or'?",
+  As: ["@@", "&&", "##", "||"],
+  Correct: 4,
+}
+
+let Q7 = {
+  Q: "Which response means 'An assigned variable with no value'?",
+  As: ["null", "undefined", "false", "0"],
+  Correct: 1,
+}
+
+let Q8 = {
+  Q: "An array's first index is assigned which value?",
+  As: ["1", "0", "i", "true"],
+  Correct: 2,
+}
+
+let Q9 = {
+  Q: "Which method adds the value as the first element of an arry without removing any elements?",
+  As: ["concat", "unshift", "pop", "toUpperCase"],
+  Correct: 2,
+}
+
+let Q10 = {
+  Q: "Which statement creates a loops that continues to run as long as a specified condition is true?",
+  As: ["while", "if", "var", "for"],
+  Correct: 1,
+}
+
+var options = $('.options');
+options.on('click', '.option', chooseSelection);
+
+//var button = $('.input');
+//button.on('click', '.input', enterInitials);
+
+//Displays Question and Options from Object entered
+function displayQuestion(question) {
+  //Display Question
+  const display = document.getElementById("display");
+  display.textContent = question.Q;
+
+  //Get Answers
+  let first = document.getElementById("Q1");
+  let second = document.getElementById("Q2");
+  let third = document.getElementById("Q3");
+  let fourth = document.getElementById("Q4");
+
+      //Set answers to options
+      first.textContent = question.As[0];
+      second.textContent = question.As[1];
+      third.textContent = question.As[2];
+      fourth.textContent = question.As[3];
   }
