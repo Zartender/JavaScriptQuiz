@@ -1,61 +1,61 @@
 let score = [0, 0];
 
 let Q1 = {
-  Q: "Which statement creates a loops that continues to run as long as a specified condition is true?",
+  Q: "Which statement creates a loop that runs as long as a condition is true?",
   As: ["while", "if", "var", "for"],
   Correct: 1,
 }
 
 let Q2 = {
-  Q: "Which response means 'An assigned variable with no value'?",
+  Q: "Which response is defined as 'Assigned variable with no value'?",
   As: ["null", "undefined", "false", "0"],
   Correct: 1,
 }
 
 let Q3 = {
-  Q: "An array's first index is assigned which value?",
+  Q: "The first index of an array is assigned which value?",
   As: ["1", "0", "i", "true"],
   Correct: 2,
 }
 
 let Q4 = {
-  Q: "What do you put before a comment in JavaScript?",
+  Q: "Which symbol do you put prior a JavaScript comment?",
   As: ["<!--", "##", "/*", "//"],
   Correct: 4,
 }
 
 let Q5 = {
-  Q: "Which logical operator compares value and type?",
+  Q: "Which of these logical operators compare type and value?",
   As: ["=", "==", "===", "%"],
   Correct: 3,
 }
 
 let Q6 = {
-  Q: "Which logical operator means 'or'?",
+  Q: "Which of these operators means 'or'?",
   As: ["@@", "&&", "##", "||"],
   Correct: 4,
 }
 
 let Q7 = {
-  Q: "A common name for a javascript file is...",
+  Q: "Javascript files are often named...",
   As: ["style", "index", "README", "script"],
   Correct: 4,
 }
 
 let Q8 = {
   Q: "What does API stand far?",
-  As: ["Airwaves Perpetrator Imposition", "Alturistic Polygraph Induction", "Applitcation Programming Interface", "Antinodal Plyometric Interference"],
+  As: ["Automatic Prototype Identification", "Automatic Processing Intelligence", "Application Programming Interface", "Anti Palidrome Interference"],
   Correct: 3,
 }
 
 let Q9 = {
-  Q: "Which method adds the value as the first element of an arry without removing any elements?",
+  Q: "One of these methods adds the value of the first element of an array without removing an element.",
   As: ["concat", "unshift", "pop", "toUpperCase"],
   Correct: 2,
 }
 
 let Q10 = {
-  Q: "_____ require a comma after each new variable.",
+  Q: "Which requires a comma after each new variable.",
   As: ["Arrays", "Objects", "Strings", "Lines"],
   Correct: 2,
 }
