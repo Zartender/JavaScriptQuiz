@@ -1,21 +1,21 @@
 let score = [0, 0];
 
 let Q1 = {
-  Q: "_____ require a comma after each new variable.",
-  As: ["Arrays", "Objects", "Strings", "Lines"],
-  Correct: 2,
+  Q: "Which statement creates a loops that continues to run as long as a specified condition is true?",
+  As: ["while", "if", "var", "for"],
+  Correct: 1,
 }
 
 let Q2 = {
-  Q: "A common name for a javascript file is...",
-  As: ["style", "index", "README", "script"],
-  Correct: 4,
+  Q: "Which response means 'An assigned variable with no value'?",
+  As: ["null", "undefined", "false", "0"],
+  Correct: 1,
 }
 
 let Q3 = {
-  Q: "What does API stand far?",
-  As: ["Airwaves Perpetrator Imposition", "Alturistic Polygraph Induction", "Applitcation Programming Interface", "Antinodal Plyometric Interference"],
-  Correct: 3,
+  Q: "An array's first index is assigned which value?",
+  As: ["1", "0", "i", "true"],
+  Correct: 2,
 }
 
 let Q4 = {
@@ -37,15 +37,15 @@ let Q6 = {
 }
 
 let Q7 = {
-  Q: "Which response means 'An assigned variable with no value'?",
-  As: ["null", "undefined", "false", "0"],
-  Correct: 1,
+  Q: "A common name for a javascript file is...",
+  As: ["style", "index", "README", "script"],
+  Correct: 4,
 }
 
 let Q8 = {
-  Q: "An array's first index is assigned which value?",
-  As: ["1", "0", "i", "true"],
-  Correct: 2,
+  Q: "What does API stand far?",
+  As: ["Airwaves Perpetrator Imposition", "Alturistic Polygraph Induction", "Applitcation Programming Interface", "Antinodal Plyometric Interference"],
+  Correct: 3,
 }
 
 let Q9 = {
@@ -55,12 +55,10 @@ let Q9 = {
 }
 
 let Q10 = {
-  Q: "Which statement creates a loops that continues to run as long as a specified condition is true?",
-  As: ["while", "if", "var", "for"],
-  Correct: 1,
+  Q: "_____ require a comma after each new variable.",
+  As: ["Arrays", "Objects", "Strings", "Lines"],
+  Correct: 2,
 }
-
-
 
 
 
