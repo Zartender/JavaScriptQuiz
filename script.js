@@ -30,9 +30,10 @@ let Q5 = {
   Correct: 3,
 }
 
-let Q6 = { "Which statement creates a loops that continues to run as long as a specified condition is true?",
-  As: ["while", "if", "var", "for"],
-  Correct: 1,
+let Q6 = {
+  Q: "Which logical operator means 'or'?",
+  As: ["@@", "&&", "##", "||"],
+  Correct: 4,
 }
 
 let Q7 = {
@@ -54,9 +55,9 @@ let Q9 = {
 }
 
 let Q10 = {
-  Q: "Which logical operator means 'or'?",
-  As: ["@@", "&&", "##", "||"],
-  Correct: 4,
+  Q: "Which statement creates a loops that continues to run as long as a specified condition is true?",
+  As: ["while", "if", "var", "for"],
+  Correct: 1,
 }
 
 
@@ -67,11 +68,11 @@ let Q10 = {
 let options = $('.options');
 options.on('click', '.option', chooseSelection);
 
-//letbutton = $('.input');
-//button.on('click', '.input', enterInitials);
+letbutton = $('.input');
+// button.on('click', '.input', enterInitials);
 
 //Displays Question and Options from Object entered
-function displayQuestion(question) {
+function displayQ(question) {
   //Display Question
   const display = document.getElementById("display");
   display.textContent = question.Q;
@@ -149,7 +150,7 @@ function showScore(){
 
 function nextQuestion (){ 
   qNumber++; 
-  selectQuestion(qNumber);
+  selectQ(qNumber);
 }
 
 //Save score and initials to local storage
